@@ -552,6 +552,7 @@ except ImportError:
             "but do not have Cython installed. We won't stop you from using "
             "other commands, but the extension files will fail to build.\n"
         )
+        SETUP_REQUIRES += ("cython>=3.0.0",)
     elif need_cython:
         sys.stderr.write(
             "We could not find Cython. Setup may take 10-20 minutes.\n"
